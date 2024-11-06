@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ Basic Flask app, with a single route and an index.html template """
 from flask import Flask, render_template, request
-from flask_babel import Babel, _
+from flask_babel import Babel
+import gettext as _
 
 # Flask app instantiation
 app = Flask(__name__)
