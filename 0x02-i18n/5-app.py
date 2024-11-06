@@ -8,7 +8,7 @@ import gettext as _
 app = Flask(__name__)
 
 # Mock user data
-user = {
+users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
     3: {"name": "Spock", "locale": "kg", "timezone": "Vulcan"},
@@ -44,8 +44,8 @@ def get_locale() -> str:
 def get_user() -> dict:
     """ Returns a user dictionary or None if the ID cannot be found """
     login_as = request.args.get('login_as')
-    if login_as and int(login_as) in user:
-        return user.get(int(login_as))
+    if login_as and int(login_as) in users:
+        return users.get(int(login_as))
     return None
 
 
