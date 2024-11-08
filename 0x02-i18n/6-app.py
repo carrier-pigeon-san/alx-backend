@@ -73,7 +73,7 @@ def before_request():
 @app.route('/', strict_slashes=False)
 def hello_route() -> str:
     """ Returns a simple html page"""
-    return render_template('5-index.html')
+    return render_template('6-index.html')
 
 
 if __name__ == "__main__":
